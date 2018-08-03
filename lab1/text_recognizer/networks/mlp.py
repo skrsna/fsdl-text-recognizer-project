@@ -15,7 +15,7 @@ def mlp(input_shape: Tuple[int, ...],
     """
     num_classes = output_shape[0]
 
-    model = Sequential()x1x
+    model = Sequential()
     # Don't forget to pass input_shape to the first layer of the model
     ##### Your code below (Lab 1)
     print (input_shape[0])
