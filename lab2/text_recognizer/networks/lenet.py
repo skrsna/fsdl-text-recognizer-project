@@ -13,7 +13,7 @@ def lenet(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...]) -> Model:
     if len(input_shape) < 3:
         model.add(Lambda(lambda x: tf.expand_dims(x, -1), input_shape=input_shape))
         input_shape = (input_shape[0], input_shape[1], 1)
-    model.add(Convolution2D(32, 3,3 border_mode="same",
+    model.add(Convolution2D(32, 3,3 ,border_mode="same",
             input_shape=input_shape))
     model.add(Activation("relu"))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(1, 1)))
